@@ -7,10 +7,10 @@ parameter_defaults:
   SshServerOptions:
     UseDns: 'no'
 
-  ControlPlaneDefaultRoute: "192.168.50.1"
+  ControlPlaneDefaultRoute: "192.168.20.1"
   ControlPlaneSubnetCidr: "24"
   DnsServers: ['10.11.5.19']
-  EC2MetadataIp: "192.168.50.1"
+  EC2MetadataIp: "192.168.20.1"
 
   NeutronExternalNetworkBridge: "'br-ex'"
 
