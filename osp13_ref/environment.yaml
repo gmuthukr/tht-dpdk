@@ -27,6 +27,6 @@ parameter_defaults:
 
   NeutronBridgeMappings: "datacentre:br-ex,data1:br-link0,data2:br-link1"
   NeutronFlatNetworks: "datacentre"
-  NeutronNetworkVLANRanges: "data1:501:600,data2:501:600"
+  NeutronNetworkVLANRanges: "data1:201:220,data2:201:220"
   NeutronNetworkType: ['vxlan', 'vlan']
   NeutronTunnelTypes: "vxlan"
