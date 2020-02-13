@@ -37,7 +37,7 @@ parameters:
     description: IP address/subnet on the storage network
     type: string
   StorageNetworkVlanID:
-    default: 501
+    default: 301
     description: Vlan ID for the storage network traffic.
     type: number
   StorageMtu:
@@ -59,7 +59,7 @@ parameters:
     description: IP address/subnet on the storage_mgmt network
     type: string
   StorageMgmtNetworkVlanID:
-    default: 502
+    default: 302
     description: Vlan ID for the storage_mgmt network traffic.
     type: number
   StorageMgmtMtu:
@@ -81,7 +81,7 @@ parameters:
     description: IP address/subnet on the internal_api network
     type: string
   InternalApiNetworkVlanID:
-    default: 504
+    default: 304
     description: Vlan ID for the internal_api network traffic.
     type: number
   InternalApiMtu:
@@ -103,7 +103,7 @@ parameters:
     description: IP address/subnet on the tenant network
     type: string
   TenantNetworkVlanID:
-    default: 505
+    default: 305
     description: Vlan ID for the tenant network traffic.
     type: number
   TenantMtu:

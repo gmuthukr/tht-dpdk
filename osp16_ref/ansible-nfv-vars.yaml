@@ -2,11 +2,11 @@
 networks:
   - name: 'access'
     physical_network: 'datacentre'
-    allocation_pool_start: '172.50.0.113'
-    allocation_pool_end: '172.50.0.125'
-    cidr: 172.50.0.112/28
+    allocation_pool_start: '172.20.0.113'
+    allocation_pool_end: '172.20.0.125'
+    cidr: 172.20.0.112/28
     enable_dhcp: true
-    gateway_ip: '172.50.0.1'
+    gateway_ip: '172.20.0.1'
     external: true
     shared: true
     router_name: router1
