@@ -4,11 +4,11 @@ PARAMS="$*"
 USER_THT="$HOME/osp16_ref"
 
 if [[ ! -f "$HOME/roles_data.yaml" ]]; then
-	openstack overcloud roles generate -o $HOME/roles_data.yaml Controller ComputeOvsDpdkSriov
+	openstack overcloud roles generate -o $HOME/roles_data.yaml Controller ComputeOvsDpdkSriov ComputeSriov
 fi
 
 openstack overcloud deploy $PARAMS \
-    --templates \
+    --templates /usr/share/openstack-tripleo-heat-templates \
     --timeout 120 \
     -r $HOME/roles_data.yaml \
     -n $USER_THT/network_data_routed_pool3.yaml \
@@ -17,7 +17,9 @@ openstack overcloud deploy $PARAMS \
     -e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-ovs.yaml \
     -e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-ovs-dpdk.yaml \
     -e /usr/share/openstack-tripleo-heat-templates/environments/services/neutron-sriov.yaml \
-    -e /usr/share/openstack-tripleo-heat-templates/environments/disable-telemetry.yaml \
+    -e /usr/share/openstack-tripleo-heat-templates/environments/metrics/ceilometer-write-qdr.yaml \
+    -e /usr/share/openstack-tripleo-heat-templates/environments/enable-stf.yaml \
+    -e $USER_THT/stf-connectors.yaml \
     -e $USER_THT/environment.yaml \
     -e $USER_THT/network-environment.yaml \
     -e $USER_THT/ml2-ovs-dpdk.yaml \

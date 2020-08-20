@@ -1,0 +1,9 @@
+parameter_defaults:
+  CeilometerQdrPublishEvents: true
+  CeilometerQdrPublishMetrics: true
+  MetricsQdrConnectors:
+    - host: stf-default-interconnect-5671-service-telemetry.apps.stfnfv1.lab.upshift.rdu2.redhat.com
+      port: 443
+      role: edge
+      sslProfile: sslProfile
+      verifyHostname: false

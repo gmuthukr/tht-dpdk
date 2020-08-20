@@ -1,0 +1,4 @@
+parameter_defaults:
+  CollectdExtraPlugins:
+    - ovs_events
+    - ovs_stats
