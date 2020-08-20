@@ -5,8 +5,6 @@ parameter_defaults:
   OvercloudComputeOvsDpdkSriovFlavor: "compute"
   OvercloudComputeSriovFlavor: "compute"
 
-  ContainerOpenvswitchNetcontroldImage: "quay.io/netcontrold/netcontrold-py:latest"
-
   ControllerCount: 1
   ComputeOvsDpdkSriovCount: 1
   ComputeSriovCount: 1
